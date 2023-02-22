@@ -234,6 +234,7 @@ function wordToNumber(){
 wordToNumber()
 
 
+
 //task hard 4
 function numberToWord(num1, amal, num2){
     let numbers = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
