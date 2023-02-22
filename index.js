@@ -4,7 +4,6 @@ function wordCount(num) {
 let nums=['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
 let str =nums[+num]
 let newStr = ''
-
 for (let i=0 ; i < num ;i++){
   newStr += str
 }
