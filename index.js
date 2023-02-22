@@ -209,34 +209,35 @@ function minSwaps(num) {
     }
 }
 minSwaps('100')
-//secound way
-let num='111110'
-let zero =0
-let one=0
-for(let i =0;i<num.length;i++){
-  if(num[i]==1){
-   one+=1
-  }else{
-  zero+=1
+ // task hard 3
+ 
+function wordedMath(num,amal,num2) {
+  a=Number(num)
+  b=Number(num2)
+  let result=0
+  let nums=['zero','one','two','three','four','five','six','seven','eight','nine','ten']
+  if(amal==='plus'){
+      i=a+b;
+      result=nums[i]
   }
+  if(amal=='minus'){
+      i=a-b;
+      result=nums[i]
+  }
+  if(amal=='multiply'){
+      i=a*b;
+      result=nums[i]
+  }
+  if(amal=='devision'){
+      i=a/b;
+      result=nums[i]
+  }
+  console.log(result);
 }
-if(one>=zero){
-return console.log(1)
-}else{
-return console.log(0)
-}
-
-// task hard 3
-
-function wordToNumber(){
-
-
-  
-}
-wordToNumber()
-
-
-
+wordedMath('6','minus','5')
+wordedMath('2','plus','2')
+wordedMath('2','multiply','2')
+wordedMath('10','devision','2')
 //task hard 4
 function numberToWord(num1, amal, num2){
     let numbers = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
@@ -333,10 +334,9 @@ const number =[0,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9]
 let newNum=[]
   number.forEach((e)=>{
     if(!newNum.includes(e)){
-   newNum.push(e)
+newNum.push(e)
     } else{
       newNum.push('_')
     }
   })
   console.log(newNum.sort())
-
