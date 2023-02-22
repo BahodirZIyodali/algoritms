@@ -230,6 +230,8 @@ return console.log(0)
 
 function wordToNumber(){
 
+
+  
 }
 wordToNumber()
 
