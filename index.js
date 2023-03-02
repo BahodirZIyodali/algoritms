@@ -462,8 +462,8 @@ const findIndex = (arg, value) => {
 
   console.log(sum.length);
   console.log(arg.indexOf(sum));
-// };
-// findIndex(str1, str);
+};
+findIndex(str1, str);
 
 
 // task 17
