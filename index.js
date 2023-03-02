@@ -364,13 +364,13 @@ console.log(firstTwo.slice(0,2));
 
 // task 5
 
-// function addText(name1,name2,num){
-// let double=name1+name2     
-// console.log(double);
-// let res= double.slice(0,num)
-// console.log("result: ",res);
-// }
-// addText('about javascript or' ,'typescript',15)
+function addText(name1,name2,num){
+let double=name1+name2     
+console.log(double);
+let res= double.slice(0,num)
+console.log("result: ",res);
+}
+addText('about javascript or' ,'typescript',15)
 
 //task 6
 
