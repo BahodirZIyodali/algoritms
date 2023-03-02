@@ -338,3 +338,136 @@ newNum.push(e)
     }
   })
   console.log(newNum.sort())
+
+
+// str algorithms
+
+//task 3
+
+function helloName(text){
+    let greeting = "Hello";
+    const upperName = text.charAt(0).toUpperCase() + text.slice(1);
+    if (text.length >= 10) {
+      console.log(`${greeting.toUpperCase()} ${text.toUpperCase()}`);
+    } else {
+      console.log(`${greeting}${upperName}`);
+    }
+}
+helloName('john')
+
+
+// task 4
+
+let firstTwo='eefdweds'
+console.log(firstTwo.slice(0,2));
+
+
+// task 5
+
+// function addText(name1,name2,num){
+// let double=name1+name2     
+// console.log(double);
+// let res= double.slice(0,num)
+// console.log("result: ",res);
+// }
+// addText('about javascript or' ,'typescript',15)
+
+//task 6
+
+function comboString(text,text1){
+let res=text.toUpperCase()+text1.toUpperCase()+text.toUpperCase()
+console.log(res)
+console.log(res.length)
+}
+comboString('Hello','World')  // nimani indexsini 6 etilvotganini tushunmadim
+
+// task 7
+let strToArr = "Solve programming problems in Javascript or Typescript!";
+const myArr = strToArr.split(" ");
+console.log(myArr)
+
+// task 8
+
+// can't do it
+
+// task 9
+
+function jsCharCode(js){
+  let arr=[]
+  for(let i =0;i<js.length;i++){
+    let jsCode=js[i].charCodeAt()
+    arr.push(jsCode)
+  }
+  console.log(arr)
+  }
+  jsCharCode('Javascript')
+
+ // task 10  
+
+ // can't do it
+
+// task 11
+
+function isSameNum(num,num2){
+  if(num===num2){
+    return true
+  }else{
+    return false
+  }
+}
+console.log(isSameNum(2,2))  
+console.log(isSameNum(2,'2'))  
+
+// task 12 
+function sameFirstLast(num){
+if(num[0]==num[num.length-1]){
+  return true
+}
+return false
+}
+console.log(sameFirstLast([2,2,3,1]))
+
+// task 13
+function MAthRound(num) {
+  console.log("value: ",Math.round(num));
+             if (num * 1 == num) {
+               let num1 =+num.toFixed(3)
+               let num2 = +num1.toFixed(2)
+               let num3 = +num2.toFixed(1)
+               let result = num3.toFixed(0)
+             console.log(`value: ${result}`);
+           }else{
+             console.log("NaN");
+         }
+}
+MAthRound(12.15678)
+// task 14
+// task 15
+
+// task 16
+// const str = prompt("text");
+// let str1 =
+//   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dignissimos repudiandae laudantium assumenda ratione veritatis mollitia ipsam aperiam. Harum, assumenda.";
+
+// const findIndex = (arg, value) => {
+//   const arr = arg.split(" ");
+//   let sum = " ";
+//   let index=0
+//   for (let i = 0; i < arr.length; i++) {
+//       if (arr[i] == value) {
+//           sum = arr[i];
+//          index+=1
+//     }
+//     return index
+//   }
+
+//   console.log(sum.length);
+//   console.log(arg.indexOf(sum));
+// };
+// findIndex(str1, str);
+
+
+// task 17
+// task 18 
+
+
