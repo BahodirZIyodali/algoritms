@@ -460,8 +460,8 @@ const findIndex = (arg, value) => {
     return index
   }
 
-//   console.log(sum.length);
-//   console.log(arg.indexOf(sum));
+  console.log(sum.length);
+  console.log(arg.indexOf(sum));
 // };
 // findIndex(str1, str);
 
