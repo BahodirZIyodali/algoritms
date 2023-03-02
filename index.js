@@ -466,7 +466,5 @@ const findIndex = (arg, value) => {
 findIndex(str1, str);
 
 
-// task 17
-// task 18 
 
 
