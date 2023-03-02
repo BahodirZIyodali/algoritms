@@ -441,25 +441,24 @@ function MAthRound(num) {
          }
 }
 MAthRound(12.15678)
-// task 14
-// task 15
+
 
 // task 16
-// const str = prompt("text");
-// let str1 =
-//   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dignissimos repudiandae laudantium assumenda ratione veritatis mollitia ipsam aperiam. Harum, assumenda.";
+const str = prompt("text");
+let str1 =
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dignissimos repudiandae laudantium assumenda ratione veritatis mollitia ipsam aperiam. Harum, assumenda.";
 
-// const findIndex = (arg, value) => {
-//   const arr = arg.split(" ");
-//   let sum = " ";
-//   let index=0
-//   for (let i = 0; i < arr.length; i++) {
-//       if (arr[i] == value) {
-//           sum = arr[i];
-//          index+=1
-//     }
-//     return index
-//   }
+const findIndex = (arg, value) => {
+  const arr = arg.split(" ");
+  let sum = " ";
+  let index=0
+  for (let i = 0; i < arr.length; i++) {
+      if (arr[i] == value) {
+          sum = arr[i];
+         index+=1
+    }
+    return index
+  }
 
 //   console.log(sum.length);
 //   console.log(arg.indexOf(sum));
