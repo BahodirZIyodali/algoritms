@@ -88,6 +88,7 @@ else if(str1.length<str2.length){
    }
 }
 console.log(newStr)
+  
 }
 checkString('hello','hi')
 
