@@ -6,7 +6,7 @@ let str =nums[+num]
 let newStr = ''
 for (let i=0 ; i < num ;i++){
   newStr += str
- 
+
 }
 console.log(newStr)
 }
