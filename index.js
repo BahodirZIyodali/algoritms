@@ -103,6 +103,7 @@ function ChangeZeroToOne(text){
             res +=1
         }
 
+      
     }
     console.log(res);}
 ChangeZeroToOne('10101010')
