@@ -32,6 +32,7 @@ function doubleChar(str) {
     console.log(sum)
 
   }
+
 doubleChar ("Hello")
 
 
