@@ -466,6 +466,199 @@ const findIndex = (arg, value) => {
 };
 findIndex(str1, str);
 
+// 2 dars 1
 
+const obj ={two:2}
+let {...one}=obj
+console.log(one)
+
+// 2 dars 2 
+const totalAmountAdj = {a:'moron',b:'moron'}
+let size = Object.keys(totalAmountAdj).length;
+console.log(size)
+
+// 2 dars 3
+function isInRange (num, range) {
+    return num >= range.min && num <= range.max ? true : false
+      
+  }
+    console.log(isInRange(3,{min:4,max:5}))
+// 2 dars 4
+
+function mostExpensiveItem(items){
+    let maxPrice = 0;
+    let mostExpensiveItem;
+  for (let key in items) {
+      if (items[key] > maxPrice) {
+        maxPrice = items[key];
+        mostExpensiveItem = key;
+      }
+    }
+  return mostExpensiveItem;
+  }
+  console.log(
+  mostExpensiveItem({tv:30,skale:20,piano:40}) )
+// 2 dars 5
+const addName = (items, name, price) => {
+  items[name] = price;
+  return items;}
+addName({piano:500},"Bratus",400)
+// 2 dars 6
+function mostExpensive(obj) {
+    let max=''
+    if(obj.piano>obj.stereo){
+         max='piano'
+    }else{max='stereo'}
+    res={
+      ...obj,
+      text:`The most expensive one is the ${max} Ring`
+    }
+    console.log(res);
+  }
+  mostExpensive({piano:500,stereo:700})
+
+let qitalar={
+  Osiyo:{
+    title:"Osiyo",
+    countres:{
+      Uzbekiston:"Uzbekiston",
+      Tojikiston:"Tojikiston",
+      Turkmaniston:"Turkmaniston",
+      Qirgiziston:"Qirgiziston",
+      Avgoniston:"Avgoniston",
+      Braziiya:"Braziiya",
+      Argentina:"Argentina",
+    }
+  },
+  Yevropa :"Yevropa",
+  Afrika:"Afrika",
+  Shimoliy_Amerika:"Shimoliy Amerika",
+  Janubiy_Amerika:"Janubiy Amerika",
+  Avstraliya:"Avstraliya",
+}
+let {
+  Osiyo: { 
+    title,
+     countres:{
+      Uzbekiston,
+      Tojikiston,
+      Turkmaniston,
+      Qirgiziston,
+      Avgoniston,
+      Braziiya,
+      Argentina,
+    }
+  },
+  Yevropa,
+  Afrika,
+  Shimoliy_Amerika,
+  Janubiy_Amerika,
+  Avstraliya,
+} = qitalar;
+console.log(
+  title,
+  Uzbekiston,
+  Tojikiston,
+  Turkmaniston,
+  Qirgiziston,
+  Avgoniston,
+  Braziiya,
+  Argentina,
+  Yevropa,
+  Afrika,
+  Shimoliy_Amerika,
+  Janubiy_Amerika,
+  Avstraliya
+);
+
+// first 3
+function number(a,b) {
+   let res = {
+    numbers:Number(a.toString() + b.toString()),
+   }
+   Object.seal(res);
+   console.log(res,Object.isSealed(res));
+}
+number(10,30)
+
+
+
+//first5
+function createNewObj(a) {
+    let newObj={}
+    let obj={
+    zero:0,
+    one:1,
+    two:2,
+    three:3,
+    four:4,
+    five:5,
+    six:6,
+    seven:7,
+    eight:8,
+    nine:9
+    }
+    if(a>9) return console.log("more then keys", Object.isFrozen(newObj));
+    for(k in obj){
+        if(obj[k]<=a){
+            newObj[k]=obj[k]
+        }
+    }
+    console.log(newObj, Object.isFrozen(newObj));   
+}
+createNewObj(9)
+
+//first 6
+function lastItem(arr) {
+    let res={
+        lastitem:arr[arr.length-1]
+    }
+    Object.seal(res);
+    Object.freeze(res);
+    console.log(res);
+}
+lastItem([1,2,3,4,])
+
+// second1
+let obj1={
+  name:'toshmat',
+  age:23,
+}
+let obj2={
+  name:'toshmat',
+  age:22,
+}
+function resultObj(obj1,obj2) {
+  if(obj1.name===obj2.name && obj1.age===obj2.age){
+      Object.freeze(obj1)
+      return obj1
+  }else{
+      Object.seal(obj1);
+      Object.seal(obj2);
+      return console.log(obj1,obj2);
+  }
+}
+resultObj(obj1, obj2);
+
+//second 2
+function findMaxWidth(obj) {
+      if(obj.piano>obj.stereo){
+          console.log('piano');
+          return Object.defineProperty(obj, 'piano', {
+              writable: false 
+          });                  
+      }else{
+          console.log("stereo");
+          return Object.defineProperty(obj, "stereo", {
+            writable: false,
+          }); 
+  
+      }
+  }
+  findMaxWidth({piano:100,stereo:700})
+
+
+ //  ----------------------- uyogini qilomadm
+ 
 
 
