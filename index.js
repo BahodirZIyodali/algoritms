@@ -657,8 +657,317 @@ function findMaxWidth(obj) {
   }
   findMaxWidth({piano:100,stereo:700})
 
+// easy 1 
+function getMaxSubSum(arr,num){
+ 
+    for(let i=1;i<arr.length;i++){
+        for(let j=1;arr.length;j++){
+            if(arr[i]+arr[j]==num){
+             console.log(arr[i],arr[j])
+            }
+        }
+    }
 
- //  ----------------------- uyogini qilomadm
+}
+getMaxSubSum([2,2,1,4],4)
+
+
+// easy 2
+function actionNum(arr){
+    let newArr=[]
+    newArr.push( arr[0]+arr[1]+arr[arr.length-1])
+    newArr.push( Math.floor( arr[0]/arr[1]/arr[arr.length-1]))
+    newArr.push(arr[0]*arr[1]*arr[arr.length-1])
+    newArr.push(arr[0]-arr[1]-arr[arr.length-1])
+    let obj = {};
+    for (let i = 0; i < newArr.length; ++i){ 
+         obj[i] = newArr[i];
+    }
+    
+    const {
+        0: add, 
+        1: devide, 
+        2: minus,
+        3:multy
+    } = {...obj}
+    const newObj = Object.assign(
+        {},
+        {
+            add,
+            devide,
+            minus,
+            multy
+        }
+    );
+    console.log(newObj)
+    
+}
+actionNum([15,3,5])
+
+// easy 3
+let a = [1,2,3];
+let b = a.shift();
+a.push(b);
+console.log(a)
+// easy 4
+function makePair(num,num2){
+let newArr=[num,num2,]
+newArr.push(num+num2)
+console.log(newArr)
+}
+makePair(3,6)
+
+
+// easy 5
+function drop(arr, el) {
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] !==el) {
+          newArr.push(arr[i]);
+        }
+    }
+    console.log(newArr)
+  }
+  
+ drop([1, 2, 3], 2)
+
+
+// easy 6
+function changeToArray(obj, num){
+    let res = Object.values(obj)
+    let bool;
+    res.find(e=> {return e === num ? bool = true : bool = false})
+    res.push(bool)
+    console.log(res)
+}
+changeToArray({ a: 13, b: 1 }, 1)
+
+//  easy 8
+function incremantItems(arr){
+ let res=arr.map(el => {return el += 1})
+    console.log(res)
+}
+incremantItems([2, 4, 6, 8])
+
+// easy 9
+function getStrLength(arr){
+let newArr=[]
+arr.forEach(e=>{
+    return  newArr.push(e.length)
+})
+
+console.log(newArr)
+}
+getStrLength(['dog','cat','tiger'])
+
+// easy 10
+function stringtoArray (str, num)  {
+    let newArr = str.split("")
+    let res = newArr.slice(0,num)
+    console.log(res)
+}
+stringtoArray('Hi', 1)
+
+// easy 11 
+function addArray(arr,arr2){
+    let arrays = [...arr,...arr2]
+    let len = {
+    arrLength: arrays.length
+    }
+       return [arrays, [len]]
+}
+console.log(addArray([1,2,3],[1,2,4]))
+
+// easy 12
+function findIndex(arr,v){
+    let res;
+    arr.forEach(e=>v === e?res = e:e )
+    console.log(res);
+}
+findIndex(['hi', 'asd', 'hfjg', 'abc'], 'hfjg')
+
+// middle 1
+
+function countTrue(arr) {
+  let values = [];
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i]) {
+      values.push(i);
+      count++;
+    }
+  }
+  return [values, count];
+}
+console.log(countTrue([true,false,false,true,false])); 
+
+// middle 2
+function toArray(obj){
+return Object.entries(obj)
+}
+console.log(toArray({a:1,b:2}))
+// middle 3
+function arrayOfMultiples(num, multy) {
+    let res= [];
+    for (let i = 1; i <= multy; i++) {
+      res.push(num * i);
+    }
+    return res;
+  }
+  console.log(arrayOfMultiples(7, 5))
+
+// middle 4
+function ObjtoArray(obj){
+    return Object.entries(obj)
+    }
+    console.log(ObjtoArray({D:1,C:2 ,B:3}))
+    
+    function arrToObject(arr) {
+        let obj = {};
+        for (let i = 0; i < arr.length; i++) {
+          obj[arr[i][0]] = arr[i][1];
+        }
+        return obj;
+      }
+      
+      console.log(arrToObject([["D", 1], ["C", 2],["B",3]]));
+//middle 5
+const sortIt = arr => {
+    let swapped = false;
+    const a = [...arr];
+    for (let i = 1; i < a.length; i++) {
+      swapped = false;
+      for (let j = 0; j < a.length - i; j++) {
+        if (a[j + 1] < a[j]) {
+          [a[j], a[j + 1]] = [a[j + 1], a[j]];
+          swapped = true;
+        }
+      }
+      if (!swapped) return a;
+    }
+    return a;
+  };
+console.log(  sortIt ([1,2,5,3,0]))
+
+//middle 6
+
+function compact(arr){
+let res=[]
+    for(let i =0;i<arr.length;i++){
+    if( typeof arr[i]==="number"){
+        res.push(arr[i])
+    }
+}
+return  res
+}
+console.log(compact([1,2,false,'str',3,true]))
+//middle 7 
+
+function clone(arr) {
+    let result = [];
+    for (let i = 0; i < arr.length; i++) {
+      result.push([...arr]);
+    }
+    return result;
+  }
+  console.log(clone([1,1,1]));
+  // secound way
+// function clone(arr, n) {
+//     let result = [];
+//     for (let i = 0; i < n; i++) {
+//       result.push([...arr]);
+//     }
+//     return result;
+//   }
+//   console.log(clone([1,1,1], 5));
+
+//middle 8
+function testJekpot(arr) {
+    for (let i = 1; i < arr.length; i++) {
+      if (arr[i] !== arr[0]) {
+        return false;
+      }
+    }
+    return true;
+  }
+  console.log(testJekpot(['aa','aa', 'aa']));  
+
+
+  //middle 9
+      // difficult one
+
+  //middle 10
+function createStrText (arr) {
+    let res = arr.join("").trim().split(",")
+    let text = {text: `${res[0]} ${res[2]} ${res[7]}`}
+    console.log(text);
+    // let result = '';
+    // for (let i = 0; i < arr.length; i++) {
+    //   if (typeof arr[i] === 'string') {
+    //     result += arr[i] + ' ';
+    //   } else if (Array.isArray(arr[i])) {
+    //     result += createStrText(arr[i]);
+    //   }
+    // }
+    // console.log(result.trim());
+}
+createStrText([[["I am"], 8], 1, 2, [[2, ["NodeJs"]], 4, [6, 3,[["text",[["Developer"]]]]]]])
+
+ 
+  //hard1
+ function concat(arr,arr2){
+ return [...arr ,...arr2]
+ }
+console.log( concat([2,2] ,[1,3]))
+// hard 2
+function secondLargest (arr) {
+    let largest = arr[0];
+    let secondLargest = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+      if (arr[i] > largest) {
+        secondLargest = largest;
+        largest = arr[i];
+      } else if (arr[i] > secondLargest && arr[i] !== largest) {
+        secondLargest = arr[i];
+      }
+    }
+    return secondLargest;
+  };
+  console.log(secondLargest([1,10,99,1]))
+// hard 3
+function sevenBoom(arr) {
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].toString().includes('7')) {
+        return 'Boom!';
+      }
+    }
+    return 'there is no 7 in the array';
+  }
+  console.log(sevenBoom([1, 2, 4, 77]));
+
+// hard 4
+
+const addToArray = (num) => {
+    let arr = [];
+    for (let i = 1; i <= num; i++) {
+      arr.push(i);
+    }
+    return arr;
+  }
+  console.log(addToArray(11))
+  // hard 5
+      
+function getLength(arr) {
+    return arr.toString().split(',').length;
+  }
+        console.log(getLength([1,  [2, ,2,2,2,2,2,23,4] ])); 
+  
+//hard 6
+        function numInStr(arr) {
+            return arr.filter(str => /\d/.test(str));
+          }
+      console.log(numInStr(['1a', 'a', '1b', 'b']))
+
  
 
 
