@@ -1133,6 +1133,199 @@ console.log(result);
   const arr2 = reverseArr(arr1);
   console.log(arr2); 
 
+// task 1
+
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+}
+let user = new Person("aziz", 16);
+let user2 = new Person("islom", 24);
+let user3 = new Person("akibar", 15);
+let user4 = new Person("abdulloh", 18);
+let user5 = new Person("bunyod", 16);
+
+console.log(user, user2, user3, user4, user5);
+
+// task 2
+
+class Car {
+  constructor(name, year, color) {
+    this.name = name;
+    this.year = year;
+    this.color = color;
+  }
+  showName() {
+    console.log(this.name);
+    return;
+  }
+  showYear() {
+    console.log(this.year);
+    return;
+  }
+  showColor() {
+    console.log(this.color);
+    return;
+  }
+}
+let bmw = new Car("x5", 2012, "blue");
+let mersades = new Car("avatar", 2022, "dark");
+let supra = new Car("supra m4", 1998, "purple");
+let toyota = new Car("pick up", 2005, "cream-white");
+let nissan = new Car("skyline", 2001, "black");
+
+console.log(supra, mersades, toyota, nissan, bmw);
+
+// metod ishlatish
+
+bmw.showColor();
+mersades.showName();
+supra.showYear();
+
+// task 3
+
+class myMath {
+  static myRound(num) {
+    console.log(Math.round(num));
+    return;
+  }
+  static myCeil(num) {
+    console.log(Math.ceil(num));
+    return;
+  }
+  static myFloor(num) {
+    console.log(Math.floor(num));
+    return;
+  }
+  static myTrunc(num) {
+    console.log(Math.trunc(num));
+    return;
+  }
+}
+myMath.myRound(1.99);
+myMath.myCeil(1.11);
+myMath.myFloor(1.11);
+myMath.myTrunc(1.59);
+
+// task 4
+
+class Shakl {
+  constructor(title, bordered_color) {
+    this.title = title;
+    this.bordered_color = bordered_color;
+  }
+  getTitle() {
+    console.log(this.title);
+    return;
+  }
+  getBorderColor() {
+    console.log(this.bordered_color);
+    return;
+  }
+  getFullDate() {
+    console.log(`name:${this.title} borderColor:${this.bordered_color}`);
+    return;
+  }
+}
+
+let torturchak = new Shakl("kvadrat", "blue");
+let aylana = new Shakl("dumoloq", "red");
+let uchburchak = new Shakl("qirrali uchburchak", "black");
+uchburchak.getTitle();
+aylana.getBorderColor();
+torturchak.getFullDate();
+// task 5
+
+class myMathPi {
+  static myPI() {
+    console.log(3.14);
+    return;
+  }
+}
+myMathPi.myPI();
+
+// task 6
+
+class myDate {
+  constructor(year, month, day) {
+    this.year = year;
+    this.month = month;
+    this.day = day;
+  }
+
+  getYear() {
+    return this.year;
+  }
+
+  getMonth() {
+    return this.month;
+  }
+
+  getDay() {
+    return this.day;
+  }
+
+  getWeekday() {
+    const daysOfWeek = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+    const date = new Date(`${this.year}-${this.month}-${this.day}`);
+    return daysOfWeek[date.getDay()];
+  }
+}
+const myBirthday = new myDate(2023, 3, 4);
+console.log(myBirthday.getYear());
+console.log(myBirthday.getMonth());
+console.log(myBirthday.getDay());
+console.log(myBirthday.getYear());
+console.log(myBirthday.getWeekday());
+
+
+
+// task 7
+class Animals{
+ 
+  constructor(name,feet,wool){
+      this.name=name
+  this.wool=wool
+  this.feet=feet
+  
+  }   
+
+}
+
+
+class HomeAnimals extends Animals{
+constructor(name,wool,feet,isCute){
+  super(wool,feet,name)
+  this.isCute=isCute
+}
+}
+
+class WildAnimals extends Animals{
+  constructor(name,wool,feet,nail){
+      super(wool,feet,name)
+     this.nail=nail
+
+  }
+}
+
+
+let homeAnimals=new HomeAnimals('cat','yes',4,true)
+let wildAnimals=new WildAnimals('lion','yes',4,true)
+
+
+
+
+
 
 
 
