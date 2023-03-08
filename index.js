@@ -969,5 +969,171 @@ function getLength(arr) {
       console.log(numInStr(['1a', 'a', '1b', 'b']))
 
  
+// task 1
+
+function checkTwoArr(arr, arr2) {
+    for (let i = 0; i < arr.length; i++) {
+      if (arr2.indexOf(arr[i]) !== -1) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  console.log(checkTwoArr([1,2,3,4],[0,6])); 
+  console.log(checkTwoArr([1,2,3,4],[2,3])); 
+  console.log(checkTwoArr([9,9,8],[1,1])); 
+
+ // task 2
+  
+ 
+ function sortArr(arr,arr2,str){
+ let resArr=arr.concat(arr2).sort()
+ console.log(resArr)
+ let resArrRev=arr.concat(arr2).sort().reverse()
+ console.log(resArrRev)
+  let resStr= resArr.fill(str)
+  console.log(resStr)
+ }
+ sortArr([1,3],[2,5],'nodejs')
+  
+// task 3
+function numberSplit(num){
+  let half = Math.floor(num / 2);
+ return[half,num-half]
+}
+console.log(numberSplit(11))
+// task 4
+
+function sortByLength(arr){
+  return arr.sort((a, b) => a.length - b.length);
+}
+console.log(sortByLength(['aa','cccc','b','ddd']))
+
+// task 5
+
+function filterArr(arr){
+  let newArr=[]
+   for(let i =0 ; i<arr.length;i++){
+     if(+arr[i]){
+     newArr.push(arr[i] *100)
+     }
+   }
+   return newArr  
+}
+console.log(filterArr([1,2,'a','b']))
+
+// task 6
+function sumOfCube(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += Math.pow(arr[i], 3);
+  }
+  
+  return sum;
+}
+
+console.log(sumOfCube([1,2,3]))
+
+
+// task 7
+    // 
+// task 8
+function findNumber(arr){
+  let sum = 0;
+  arr.forEach(el => {sum += el });
+  // let sum = arr.reduce((acc, curr) => acc + curr, 0); second way
+  console.log(sum / arr.length)
+}
+findNumber([1,2,3,4])  
+
+// task 9
+function formatPhoneNum(arr) {
+  let formattedNum = "";
+  for (let i = 0; i < arr.length; i++) {
+    if (i === 0) {
+      formattedNum += "(";
+    }
+    if (i === 3) {
+      formattedNum += ") ";
+    }
+    if (i === 6) {
+      formattedNum += "-";
+    }
+    formattedNum += arr[i];
+  }
+  return formattedNum;
+}
+
+console.log(formatPhoneNum([1,2,3,4,5,6,7,8,9,10])  )
+//task 10
+function toArray(num){
+  let myArr = String(num).split("").map((num)=>{
+    return Number(num)
+  })
+  console.log(myArr)  }
+toArray(21) 
+
+//task 11
+function minMax(arr) {
+  let min = arr[0];
+  let max = arr[0];
+  
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < min) {
+      min = arr[i];
+    }
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
+  
+  return [min, max, min*max];
+}
+console.log(minMax([1,2,3,4,5]))
+  // task 12
+function getDepth(val) {
+
+     if(Array.isArray(val)) {
+      return 1 + Math.max(0, ...val.map(getDepth))
+     }else {
+      return 0
+   }
+        }
+ let result = getDepth([[[[[[[[]]]]]]]])
+console.log(result);
+  // task 13
+    function reverseImage(arr) {
+      for (let i = 0; i < arr.length; i++) {
+        arr[i].reverse();
+      }
+      arr.reverse();
+      return arr;
+    }
+    console.log(reverseImage([[1,2,3],[4,5,6]]));
+  // task 14
+
+
+  function changeNumberToString(start, end) {
+    const numberToWord = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
+    const result = [];
+    for (let i = start; i <= end; i++) {
+      result.push(numberToWord[i]);
+    }
+    return result;
+  }
+  
+  function reverseArr(arr) {
+    return arr.reverse();
+  }
+  
+  const arr1 = changeNumberToString(1, 5);
+  console.log(arr1); 
+  
+  const arr2 = reverseArr(arr1);
+  console.log(arr2); 
+
+
+
 
 
