@@ -1,4 +1,3 @@
-
 // task easy 1
 function wordCount(num) {
 let nums=['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
