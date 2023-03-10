@@ -1325,6 +1325,185 @@ let wildAnimals=new WildAnimals('lion','yes',4,true)
 
 
 
+// easy 2
+function firstLast6(arr){
+ for(let i =0;i<arr.length;i++){
+  if(arr[0]==6 || arr[arr.length-1]==6){
+    return true
+  }
+ }
+return false
+}
+console.log(firstLast6([ 1,6,1]))
+// easy 3
+function sameFirstLast(arr){
+    for(let i =0;i<arr.length;i++){
+     if(arr[0]  == arr[arr.length-1]){
+       return true
+     }
+    }
+   return false
+   }
+   console.log(sameFirstLast([2,6,1]))
+
+// easy 4
+
+function commanEnd(arr,arr2){
+    for(let i =0; i<arr.length ;i++){
+    
+     if(arr[arr.length-1] == arr2[arr2.length-1]){
+    return true
+     }
+    }
+    return false
+    }
+console.log(commanEnd([1,2,4],[1,5,4]))
+
+// easy 5 
+
+function roteteLeft3(nums){
+    return [nums[1],nums[2],nums[0]]
+   }
+   console.log(roteteLeft3([1,2,3]));
+
+// easy 6
+
+// easy 7
+function midThree(nums){
+  let middle =Math.floor(nums.length/2);
+  return [nums[middle-1] ,nums[middle], nums[middle+1]]
+}
+console.log(midThree([1,2,3,4,5]))  
+
+// easy 8
+
+function answerCell(first, center, last){
+    if(last){
+        return false;
+    }          
+    if(first && !center){
+        return false;
+    }
+    return true;
+}
+console.log(answerCell(false, true,true ) )
+  
+// easy 9  
+function blackjack(num1, num2) {
+    const maxNum = Math.max(num1, num2);
+    const numArray = maxNum.toString().split('').map(el => {
+      switch (el) {
+        case '1': return 'one';
+        case '2': return 'two';
+        case '3': return 'three';
+        case '4': return 'four';
+        case '5': return 'five';
+        case '6': return 'six';
+        case '7': return 'seven';
+        case '8': return 'eight';
+        case '9': return 'nine';
+        case '0': return 'zero';
+      }
+    });
+    const type = typeof numArray[0];
+    return { max_number: maxNum, arr: numArray, arr_length: numArray.length, type: type };
+  }
+  
+console.log(blackjack(19,21))
+// easy 10 
+
+function reverseWord(str) {
+    return str.split(' ').reverse().join(' ');
+  }
+  
+console.log(reverseWord("the sky is blue"))
+
+// easy 11 
+    let arr =['olma',15,[1,2,3]]
+const [apple,num,numsArr]=arr
+const [one,two,three]=numsArr
+console.log(apple,num,one)
+// easy 12 
+
+let array =['olma',15,[5,4,3] , [{name:'a'}]]
+const [,,,name] =array
+console.log(name)
+
+
+// middle 1
+
+function removeDups(arr){
+    let res=[]
+  arr.forEach(e=>{
+    if(!res.includes(e)){
+        res.push(e)
+    }
+  })
+return res
+}
+console.log(removeDups([1,2,1,2]))
+
+// middle 2
+
+Array.prototype.myToString = function() {
+    let str = '';
+    for (let i = 0; i < this.length; i++) {
+      if (i !== 0) {
+        str += ',';
+      }
+      if (Array.isArray(this[i])) {
+        str += this[i].myToString();
+      } else {
+        str += this[i].toString();
+      }
+    }
+    return str;
+  };
+  const arr2 = [1, 2];
+  const str = arr2.myToString();
+  console.log(str);
+    
+
+  // middle 3
+  function missingNumber(arr) {
+    const n = arr.length + 1;
+    const lSum = (n * (n + 1)) / 2;
+    const aSum = arr.reduce((sum, num) => sum + num, 0);
+    return lSum - aSum;
+  }
+  
+console.log(missingNumber([1, 2, 3, 4,5,  7, 8, 9, 10]))
+  
+
+// middle 4
+
+// middle 5
+
+// middle 6
+
+
+function mumbling(name) {
+    let result = '';
+    for (let i = 0; i < name.length; i++) {
+      let char = name.charAt(i);
+      result += char.toUpperCase() + char.toLowerCase().repeat(i) + '-';
+    }
+    return result.slice(0, -1);
+  }
+  
+  console.log(mumbling('mubashir'));  
+  
+
+  // middle 7
+  function minusTwoArrFromFirstArray(arr) {
+     const [firstArr, secArr] = arr;
+     const res = firstArr.map((el, i) => el - secArr[i]);
+     return res.filter(el => !isNaN(el));
+  }
+  console.log(minusTwoArrFromFirstArray(
+   [ [10,20,30,40,50,] , [4,5,6,10,9,] ]
+    ))
+
 
 
 
