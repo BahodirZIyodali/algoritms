@@ -12,10 +12,10 @@ wordCount('4')
 // task easy 1 second way
 let nums=['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
 let num1=2
-let str =nums[+num]
+let str11 =nums[+num]
 let newStr = ''
 for(let i = 0; i < num1;i++){
-  newStr += str
+  newStr += str11
 }
 console.log(newStr)
 
@@ -275,11 +275,11 @@ function numberToWord(num1, amal, num2){
         return numbers[sum]
     }
 }
-let res = numberToWord('ten', 'minus', 'three')
+let ress = numberToWord('ten', 'minus', 'three')
 let res2 = numberToWord('one', 'plus', 'three')
 let res3= numberToWord('five', 'multipul', 'two')
 let res4 = numberToWord('eight', 'devision', 'four')
-console.log(res)
+console.log(ress)
 console.log(res2)
 console.log(res3);
 console.log(res4);
@@ -298,13 +298,13 @@ function points(x,y) {
  points(0,0)
 // task codewars
 let compact=[1,3,5,'hi',true]
-let x=[]
+let x1=[]
 for(let i=0; i<compact.length; i++){
   if (typeof compact[i] === 'number'){
    x+=compact[i]
   }
 }
-console.log(x)
+console.log(x1)
 
 // task  Arrays in 1 array
 
@@ -386,9 +386,6 @@ let strToArr = "Solve programming problems in Javascript or Typescript!";
 const myArr = strToArr.split(" ");
 console.log(myArr)
 
-// task 8
-
-// can't do it
 
 // task 9
 
@@ -402,9 +399,7 @@ function jsCharCode(js){
   }
   jsCharCode('Javascript')
 
- // task 10  
 
- // can't do it
 
 // task 11
 
@@ -444,7 +439,7 @@ MAthRound(12.15678)
 
 
 // task 16
-const str = prompt("text");
+const string = prompt("text");
 let str1 =
   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dignissimos repudiandae laudantium assumenda ratione veritatis mollitia ipsam aperiam. Harum, assumenda.";
 
@@ -463,7 +458,7 @@ const findIndex = (arg, value) => {
   console.log(sum.length);
   console.log(arg.indexOf(sum));
 };
-findIndex(str1, str);
+findIndex(str1, string);
 
 // 2 dars 1
 
@@ -892,8 +887,6 @@ function testJekpot(arr) {
   console.log(testJekpot(['aa','aa', 'aa']));  
 
 
-  //middle 9
-      // difficult one
 
   //middle 10
 function createStrText (arr) {
@@ -1035,8 +1028,7 @@ function sumOfCube(arr) {
 console.log(sumOfCube([1,2,3]))
 
 
-// task 7
-    // 
+
 // task 8
 function findNumber(arr){
   let sum = 0;
@@ -1129,8 +1121,8 @@ console.log(result);
   const arr1 = changeNumberToString(1, 5);
   console.log(arr1); 
   
-  const arr2 = reverseArr(arr1);
-  console.log(arr2); 
+  const array2 = reverseArr(arr1);
+  console.log(array2); 
 
 // task 1
 
@@ -1177,7 +1169,6 @@ let nissan = new Car("skyline", 2001, "black");
 
 console.log(supra, mersades, toyota, nissan, bmw);
 
-// metod ishlatish
 
 bmw.showColor();
 mersades.showName();
@@ -1418,10 +1409,10 @@ function reverseWord(str) {
 console.log(reverseWord("the sky is blue"))
 
 // easy 11 
-    let arr =['olma',15,[1,2,3]]
-const [apple,num,numsArr]=arr
-const [one,two,three]=numsArr
-console.log(apple,num,one)
+    let arrr1 =['olma',15,[1,2,3]]
+const [apple,num,numsArr]=arrr1
+const [onee,two,three]=numsArr
+console.log(apple,num,onee)
 // easy 12 
 
 let array =['olma',15,[5,4,3] , [{name:'a'}]]
@@ -1474,12 +1465,6 @@ Array.prototype.myToString = function() {
 console.log(missingNumber([1, 2, 3, 4,5,  7, 8, 9, 10]))
   
 
-// middle 4
-
-// middle 5
-
-// middle 6
-
 
 function mumbling(name) {
     let result = '';
@@ -1503,9 +1488,65 @@ function mumbling(name) {
    [ [10,20,30,40,50,] , [4,5,6,10,9,] ]
     ))
 
+//
+    function isPalindrome(text) {
+      const reversed = text.split('').reverse().join('');
+      return text === reversed;
+    }
+    
+    console.log(isPalindrome('kiyik'));
+    console.log(isPalindrome('hello'));
+      
 
 
 
+      // NODE JS
+
+  //   task 1 
+
+  let text=  Buffer.from('I am learning javascript')
+  let text2= Buffer.from('We learnt typescript')
+  let x =  Buffer.from(text+text2)
+console.log(x)
+let res=x.toString()
+console.log(res)
+    
+// task 2
+
+let bufff = Buffer.from("I am learning JavasCript ");
+let buff2 = Buffer.from("we learni TypeCript ");
+let buff3 = Buffer.from("About buffer ");
+let arrr=[bufff,buff2,buff3]
+let buf=Buffer.concat(arrr)
+let a1 = buf.toString().split(" ");
+console.log(a1.indexOf('JavasCript'));
 
 
+// task 3
 
+
+let buf1 = Buffer.from("I am learning JavasCript");
+let buf2 = Buffer.from("we learni TypeCript");
+a=buf1.length;
+b= buf2.length;
+if(a>b){
+  buf1.copy(buf2,0)
+  console.log(buf2.toString());
+  for (const x of buf2.entries()) {
+    console.log(x);
+  }
+  console.log(buf2.length);
+}else if(a<b){
+    buf2.copy(buf1, 0);
+    console.log(buf1.toString());
+    for (const x of buf1.entries()) {
+      console.log(x);
+    }
+    console.log(buf1.length);
+
+}else{
+   console.log(true);
+}
+
+
+// task 4
