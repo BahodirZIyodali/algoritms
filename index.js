@@ -59,6 +59,7 @@ let res=''
 }
   console.log(res)
 
+  
 }
 revarseText('salom')
 //task easy 5
