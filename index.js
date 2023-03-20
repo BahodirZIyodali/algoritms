@@ -6,7 +6,7 @@ let newStr = ''
 for (let i=0 ; i < num ;i++){
   newStr += str
 }
- 
+
 console.log(newStr)
 }
 wordCount('4')
