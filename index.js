@@ -8,6 +8,7 @@ for (let i=0 ; i < num ;i++){
 }
 console.log(newStr)
 }
+
 wordCount('4')
 
 
