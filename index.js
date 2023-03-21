@@ -12,7 +12,6 @@ console.log(newStr)
 wordCount('4')
 
 
-
 // task easy 1 second way
 let nums=['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
 let num1=2
