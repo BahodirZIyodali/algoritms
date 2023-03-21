@@ -10,6 +10,7 @@ console.log(newStr)
 }
 wordCount('4')
 
+
 // task easy 1 second way
 let nums=['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
 let num1=2
@@ -33,7 +34,6 @@ function doubleChar(str) {
   }
 
 doubleChar ("Hello")
-
 
 //task easy 3
 
