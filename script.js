@@ -11,7 +11,9 @@ function command(a, b) {
     }
     return false;
 }
+
 console.log(command([1,], [2, 2]));
+
 function has23(nums) {
     if (nums.includes(2) || nums.includes(3)) {
         return true;
