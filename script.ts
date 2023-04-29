@@ -6,7 +6,7 @@
 //   }
 //   console.log(swap([1, 2, 10]));
 
-
+ 
   
 //   function command(a: number[], b: number[]): boolean {
 //     if (a[0] == b[0] || a[a.length - 1] == b[b.length - 1]) {
